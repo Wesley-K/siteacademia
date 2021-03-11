@@ -1,0 +1,52 @@
+#{extends 'main-usuario.html' /}
+#{set title:'Inicial' /}
+
+
+<section class="dashboard-header section-padding">
+        <div class="container-fluid">
+          <div class="row d-flex align-items-md-stretch">
+          
+       
+			<h1>(I)mperial (F)orce ACADEMY | USUÁRIO</h1>
+             
+        </div>
+       </div>
+</section> </br>
+			
+			
+	 <section class="statistics">
+        <div class="container-fluid">
+          <div class="row d-flex">
+            <div class="col-lg-6">
+              <!-- Income-->
+              <div class="card income text-center">
+                <div class="icon"><i class="icon-clock""></i></div>
+                <div class="number"> 
+                
+             
+                ${session.get("turno")}
+               
+               
+                </div><strong class="text-primary">Turno</strong>
+                <p>Para escolher/mudar o turno, procure um responsavel pela academia.</p>
+              </div>
+            </div>
+            
+            <div class="col-lg-6">
+              <!-- Income-->
+              <div class="card income text-center">
+                <div class="icon"><i class="icon-form"></i></div>
+                <div class="number">
+                
+                 ${session.get("treino")}
+                
+                </div><strong class="text-primary">Treino</strong>
+                <p>Para escolher/mudar o treino, procure um responsavel pela academia.</p>
+              </div>
+            </div>
+            
+            <div class="col-lg-4">
+           </div>
+         </div>
+       </div>
+     </section>

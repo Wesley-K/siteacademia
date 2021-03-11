@@ -1,0 +1,48 @@
+#{extends 'main.html' /}
+#{set title:'Listagem de Usuários' /}
+
+ <div class="col-lg-12" >
+              <div class="card">
+                <div class="card-header">
+                  <h4>Listagem de Servidores e Usuários:</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                      <thead>
+                        <tr>
+                          <th></th>
+                          <th>Nome</th>
+                          <th >E-mail</th>
+                          <th>Tipo</th>
+                          <th>Turno</th>
+                          <th>Treino</th>
+                          
+                          <th>Funções</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                     #{list items: lista, as: 'u'}
+                        <tr >
+                          <th scope="row"></th> 
+                          <td >${u.nome}</td>
+                          <td >${u.email}</td>
+                          <td>${u.nivel}</td>
+                          <td>${u.turno?.nome}</td>
+                          <td>${u.treino?.nome}</td>
+                        
+                          
+                          <td class="list-group-item list-group-item-action list-group-item-success">
+                          	<a href="@{Usuarios.editar(u.id)}"> Editar</a> |
+                          	<a href="@{Usuarios.deletar(u.id)}"> Deletar</a>
+                          </td>
+                        </tr>
+                      #{/list}
+                      
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          

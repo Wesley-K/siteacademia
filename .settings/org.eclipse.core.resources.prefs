@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+encoding//app/views/Application/telaUsu.html=UTF-8
+encoding//app/views/CadastreSe/formCadastrar.html=UTF-8
+encoding//app/views/Fichas/formCorporal.html=UTF-8
+encoding//app/views/Fichas/listarCorporal.html=UTF-8
+encoding//app/views/Servidores/form.html=UTF-8
+encoding//app/views/Servidores/listar.html=UTF-8
+encoding//app/views/Servidores/listarUsuarios.html=UTF-8
+encoding//app/views/Treinos/form.html=UTF-8
+encoding//app/views/Treinos/listar.html=UTF-8
+encoding//app/views/Turnos/form.html=UTF-8
+encoding//app/views/Turnos/listar.html=UTF-8
+encoding//app/views/Usuarios/dados.html=UTF-8
+encoding//app/views/Usuarios/form.html=UTF-8
+encoding//app/views/Usuarios/listar.html=UTF-8
+encoding//app/views/errors/permissao.html=UTF-8
+encoding/<project>=UTF-8

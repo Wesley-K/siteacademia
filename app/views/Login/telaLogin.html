@@ -1,0 +1,48 @@
+#{extends 'main-login.html' /}
+#{set title:'Inicial' /}
+
+
+<div class="booking-classes">
+        <div class="container-fluid">
+            <div class="booking-text">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="booking-heading set-bg" data-setbg="@{'public/crossfit-2-master/img/booking.jpg'}">
+                                    <div class="booking-inner-text">
+                                        <h2>Entrar</h2>
+                                        <p> Conecte-se a sua conta. Vamos aos treinos!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="booking-form">
+                            <form action="@{Login.autenticar()}" >
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        
+                                        <input name="email" type="email" placeholder="E-mail" >
+                                        
+                                        <input name="senha" type="password" placeholder="Senha">
+                                        
+                                        #{if flash.error}
+              								 <div class="vermelho">${flash.error}</div>
+          								#{/if} </br>
+                                     
+                                     </div>
+                                    <div class="col-lg-6">
+                                        
+                                        <input type="submit" value="Entrar" class="submit-btn">
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
