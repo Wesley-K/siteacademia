@@ -1,6 +1,6 @@
 # Application dependencies
 
 require:
-    - play 1.4.5
+    - play 1.4.5   
     - mysql -> mysql-connector-java 8.0.23:
-    		force: true
+        force: true
