@@ -24,7 +24,16 @@
                 <div class="number"> 
                 
              
-                ${session.get("turno")}
+                  #{if session.get("turno")} 
+                              
+                 	${session.get("turno")}
+                 	
+                 #{/if}
+                 
+                 #{else}
+					---
+   		   		 #{/else}
+                
                
                
                 </div><strong class="text-primary">Turno</strong>
@@ -38,7 +47,16 @@
                 <div class="icon"><i class="icon-form"></i></div>
                 <div class="number">
                 
-                 ${session.get("treino")}
+                 #{if session.get("treino")} 
+                              
+                 	${session.get("treino")}
+                 	
+                 #{/if}
+                 
+                 #{else}
+					---
+   		   		 #{/else}
+                 
                 
                 </div><strong class="text-primary">Treino</strong>
                 <p>Para escolher/mudar o treino, procure um responsavel pela academia.</p>

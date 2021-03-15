@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -37,7 +38,7 @@ public class Usuario extends Model {
 		senha = Crypto.passwordHash(s);
 	}
 	
-	@OneToMany
+	@OneToMany(mappedBy = "usuario")
 	public List<Ficha> fichas;
 	
 	

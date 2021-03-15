@@ -1,4 +1,4 @@
-package controllers;
+	package controllers;
 
 import play.*;
 import play.cache.Cache;
@@ -38,10 +38,12 @@ public class Fichas extends Controller {
 		
 		fic.usuario = usuario;
 		fic.save();
-		usuario.fichas.add(fic);
-		usuario.save();
+			if (fic.usuario == null) {
+				usuario.fichas.add(fic);
+				usuario.save();
+			}
 		flash.success("Salvo com sucesso!");
-		formCorporal();
+		listarCorporal();
 		
 	}
 	
