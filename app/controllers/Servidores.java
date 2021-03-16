@@ -51,12 +51,26 @@ public class Servidores extends Usuarios {
 	}
 	
 	public static void listar () {
-		List<Servidor> lista = Servidor.findAll();
+		String busca = params.get("busca");
+		
+		List<Servidor> lista;
+		if (busca == null) {
+			 lista = Servidor.findAll();
+		} else {
+			 lista = Servidor.find("nome like ?1 or email like ?1 order by email ", "%"+busca+"%").fetch();
+		}		
 		render(lista);
 	}
 	
 	public static void listarUsuarios () {
-		List<Usuario> lista = Usuario.findAll();
+		String busca = params.get("busca");
+		
+		List<Usuario> lista;
+		if (busca == null) {
+			 lista = Usuario.findAll();
+		} else {
+			 lista = Usuario.find("nome like ?1 or email like ?1 order by email ", "%"+busca+"%").fetch();
+		}			
 		render(lista);
 	}
 	public static void editar(long id) {
